@@ -36,6 +36,7 @@ class ListView extends React.Component {
 		if(coinMarketData == null || coinMarketData.length == 0){
 			return;
 		}
+		console.log(coinMarketData)
 		return coinMarketData.map((coin, index) =>
 			<ListItem  
 				key={index}

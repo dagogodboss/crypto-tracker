@@ -10,11 +10,11 @@ export const base = {
     FONT_WEIGHT_MEDIUM: "500",
     FONT_WEIGHT_BOLD: "700",
   
-    PRIMARY_FONT_FAMILY: "Montserrat-Regular",
-    PRIMARY_FONT_FAMILY_BOLD: "Montserrat-Bold",
+    PRIMARY_FONT_FAMILY: "Roboto",
+    PRIMARY_FONT_FAMILY_BOLD: "Roboto_medium",
   
-    SECONDARY_FONT_FAMILY: "Montserrat-Regular",
-    SECONDARY_FONT_FAMILY_ITALIC: "Montserrat-Bold"
+    SECONDARY_FONT_FAMILY: "Roboto",
+    SECONDARY_FONT_FAMILY_ITALIC: "Roboto_medium"
   };
   
   export const darkTheme = {

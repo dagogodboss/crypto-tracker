@@ -10,7 +10,7 @@ import { changeBaseTheme, changeColorTheme} from './../../actions/theme-action';
 const Container = styled.View`
   flex: 1;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   background-color: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
 `;
 
@@ -33,10 +33,10 @@ const Body = styled.View`
   justify-content: space-between;
   align-items: stretch;
   background-color: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
-  padding-top: 30;
-  padding-bottom: 30;
-  padding-left: 30;
-  padding-right: 30;
+  padding-top: 10;
+  padding-bottom: 10;
+  padding-left: 10;
+  padding-right: 10;
 `;
 
 const Segment = styled.View`
@@ -69,62 +69,33 @@ const ItemPicker = styled.Picker`
   padding-top: 20;
 `;
 
-const Footer = styled.View`
-  padding-top: 20;
-  padding-bottom: 20;
-  padding-left: 20;
-  padding-right: 20;
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  background-color: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
-`;
-
-const Button = styled.TouchableOpacity`
-  padding-top: 10;
-  padding-bottom: 10;
-  padding-left: 10;
-  padding-right: 10;
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-
-  elevation: 1
-  border-radius: 2;
-  
-  background-color:${props => props.theme.PRIMARY_COLOR};
-`;
-
-const ButtonText = styled.Text`
-  text-align: center;
-  color: ${props => props.theme.PRIMARY_FOREGROUND_COLOR};
-  font-family: ${props => props.theme.PRIMARY_FONT_FAMILY};
-  font-size: ${props => props.theme.FONT_SIZE_LARGE};
-`;
 
 class SettingsScreen extends React.Component {
+  
+  static navigationOptions = {
+    header: null,
+  }; 
+  
   render() {
     return (
       <ThemeProvider theme={this.props.theme}>
         <Container>
           <Header>
-            <HeaderText>Login</HeaderText>
+            <HeaderText>Page Settings</HeaderText>
           </Header>
           <Body>
             <Segment>
               <Icon
                 source={{
-                  uri: "https://img.icons8.com/dusk/50/000000/lock-2.png"
+                  uri: "https://img.icons8.com/dusk/50/000000/settings.png"
                 }}
               />
             </Segment>
 
             <Segment>
-              <Title>Login</Title>
+              <Title>Settings  Page</Title>
               <Description>
-                Please enter your username and password to continue
+                Set the Theme and Color of the App.
               </Description>
             </Segment>
 
@@ -161,12 +132,6 @@ class SettingsScreen extends React.Component {
               </ItemPicker>
             </Segment>
           </Body>
-
-          <Footer>
-            <Button>
-              <ButtonText>Login</ButtonText>
-            </Button>
-          </Footer>
         </Container>
       </ThemeProvider>
     );
