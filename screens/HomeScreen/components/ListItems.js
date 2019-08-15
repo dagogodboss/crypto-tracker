@@ -46,7 +46,7 @@ export default class ListItems extends React.Component {
                     </Text>
                 </View>
                 
-                <View style={styles.secondItem}>
+                <View style={styles.thirdItem}>
                 {(Math.sign(percent_change_1h) == 1) ?  
                 <View>
                     <Ionicons style={styles.arrowUp} name="md-arrow-up"/> 
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
         elevation:5,
         minHeight:75,
         padding:4,
+        justifyContent:'space-between',
         paddingRight: -10,
     }, 
     firstItem:{
@@ -94,11 +95,18 @@ const styles = StyleSheet.create({
         marginRight:9,
     },
     secondItem:{
-        flex:1,
+        flex:3,
         flexDirection:'column',
-        justifyContent:'flex-start',
+        justifyContent:'center',
         alignSelf:'center',
-        marginRight:9,
+        marginLeft:50,
+    },
+    
+    thirdItem:{
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignSelf:'center',
     },
     coinName:{
         fontSize:18,
@@ -114,9 +122,9 @@ const styles = StyleSheet.create({
         color: '#ddd',
     },
     arrowUp:{ 
-        fontSize:23, color:Colors.WHITE
+        fontSize:23,fontWeight:'900', color:Colors.WHITE
     },
     arrowDown:{ 
-        fontSize:23, color:Colors.RED
+        fontSize:23,fontWeight:'900', color:Colors.RED
     }
 });

@@ -43,8 +43,8 @@ class ListView extends React.Component {
 				key={index}
 				symbol={coin.symbol} 
 				coin_name={coin.name} 
-				price_usd={coin.price_usd}
-				cap={coin.market_cap_usd}
+				price_usd={coin.quote.USD.price}
+				cap={coin.quote.USD.market_cap}
 				volume={coin.total_supply}
 				percent_change_1h = {coin.percent_change_1h}
 				percent_change_24h = {coin.percent_change_24h}
