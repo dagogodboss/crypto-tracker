@@ -114,41 +114,6 @@ const styles = StyleSheet.create({
         fontSize:11,
         color: '#ddd',
     },
-    thirdItem:{
-        flex:1,
-        flexDirection:'row',
-        justifyContent:'flex-end',
-        alignSelf:'center',
-        marginRight:9,
-    },
-    parentHr:{
-        height:1,
-        color: Colors.WHITE,
-        width:'100%'
-    },
-    childHr:{
-        height:1,
-        backgroundColor: Colors.LIGHTGRAY,
-        width:'100%',
-    },
-    chart:{
-        flex :1, 
-        flexDirection: 'row', 
-        display:'flex', 
-        paddingLeft:22,
-        paddingTop:25,
-        backgroundColor:Colors.gradientOne,
-        minHeight:180,
-        marginTop:-40,
-        marginBottom:4,
-        borderRadius:10,
-    }, 
-    chartTextInfo:{
-        fontFamily:'Roboto',
-        fontSize:14,
-        color:Colors.WHITE,
-        margin :10,
-    },
     arrowUp:{ 
         fontSize:23, color:Colors.WHITE
     },

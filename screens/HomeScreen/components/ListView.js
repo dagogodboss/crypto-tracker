@@ -34,7 +34,7 @@ class ListView extends React.Component {
     _renderItems(){
         let { coinMarketData } = this.state;
 		if(coinMarketData == null || coinMarketData.length == 0){
-			coinMarketData = coinMarket
+			return;
 		}
 		return coinMarketData.map((coin, index) =>
 			<ListItem  

@@ -10,7 +10,7 @@ export default function SettingsScreen() {
     <View style={styles.container}>
       <Header pageName="SETTINGS"/>
       <Body>
-       <Text> Hello Screen How are You On Load please get the Api from Coin MArket Cap</Text>
+       <Text> </Text>
       </Body>
     </View>
   );
