@@ -104,7 +104,7 @@ const ButtonText = styled.Text`
   font-size: ${props => props.theme.FONT_SIZE_LARGE};
 `;
 
-class Login extends React.Component {
+class SettingsScreen extends React.Component {
   render() {
     return (
       <ThemeProvider theme={this.props.theme}>
@@ -185,4 +185,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Login);
+)(SettingsScreen);
