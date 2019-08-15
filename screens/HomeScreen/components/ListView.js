@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux';
-import { View,StyleSheet } from 'react-native';
+import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import { getCoinMarket } from './../../../actions/getCoinMarket';
 import { BarIndicator } from 'react-native-indicators';
 import { saveMarketData } from '../../../class/marketData';
