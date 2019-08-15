@@ -57,7 +57,7 @@ const tabNavigator = createBottomTabNavigator(
     SettingsStack,
   },
   {
-    initialRouteName:'SettingsStack',
+    initialRouteName:'HomeStack',
     tabBarOptions:{
       style:{
         backgroundColor:Colors.BodyColor,

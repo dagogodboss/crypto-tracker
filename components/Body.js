@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
-    paddingLeft:30,
+    paddingLeft:5,
     paddingBottom:30,
-    paddingRight:30,
+    paddingRight:5,
   },
 });
 export default Body;

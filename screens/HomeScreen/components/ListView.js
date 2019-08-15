@@ -4,8 +4,8 @@ import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import { getCoinMarket } from './../../../actions/getCoinMarket';
 import { BarIndicator } from 'react-native-indicators';
 import { saveMarketData } from '../../../class/marketData';
-import ListItem from './ListItem';
 import Colors from '../../../constants/Colors';
+import Items from './ListItems';
 
 class ListView extends React.Component {
     constructor(props) {
@@ -39,7 +39,7 @@ class ListView extends React.Component {
 		console.log(coinMarketData)
 		const {data } = coinMarketData
 		return data.map((coin, index) =>
-			<ListItem  
+			<Items  
 				key={index}
 				symbol={coin.symbol} 
 				coin_name={coin.name} 

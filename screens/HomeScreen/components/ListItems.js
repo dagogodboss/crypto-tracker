@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Image, ImageBackground, Text } from 'react-native';
-import { LinearGradient } from 'expo';
+import { View,  StyleSheet, Image,  Text } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import {imageLinks} from '../../../constants/coinIcon';
 import Colors from '../../../constants/Colors';
-export default class ListItem extends React.Component {
+
+export default class ListItems extends React.Component {
     constructor(props) {
         super(props);
         this.state = {}       
@@ -15,9 +16,9 @@ export default class ListItem extends React.Component {
         return (
             <View>
             <LinearGradient 
-                colors={[Colors.gradientThree, Colors.gradientTwo,Colors.gradientOne]} 
-                start={[-1,-2,-5]}
-                end={[1,3,2]}
+                colors={[Colors.gradientThree, Colors.gradientTwo]} 
+                start={[-1,-2]}
+                end={[1,2]}
                 style={styles.container}
             >
                 <View style={styles.firstItem}>
@@ -30,7 +31,7 @@ export default class ListItem extends React.Component {
                             {symbol}
                         </Text>
                         <Text style={styles.price}>
-                            <Ionicons style={styles.price} name="md-logo-usd"/> 
+                            <Ionicons style={styles.price} name="logo-usd"/> 
                             { parseFloat(price_usd).toFixed(4) }
                         </Text>
                     </View>
@@ -38,7 +39,7 @@ export default class ListItem extends React.Component {
                 </View>
                 <View style={styles.secondItem}>
                     <Text style={styles.cap}>
-                        Cap <Ionicons style={styles.price} name="md-logo-usd"/>{parseFloat(cap)}
+                        Cap <Ionicons style={styles.price} name="logo-usd"/>{parseFloat(cap)}
                     </Text>
                     <Text style={styles.price}>
                         Vol {parseFloat(volume).toFixed(2)}
@@ -49,12 +50,10 @@ export default class ListItem extends React.Component {
                 {(Math.sign(percent_change_1h) == 1) ?  
                 <View>
                     <Ionicons style={styles.arrowUp} name="md-arrow-up"/> 
-                    <Ionicons style={styles.arrowUp} name="md-arrow-up"/> 
                 </View>
                 :
                 <View>
                     <Ionicons style={styles.arrowDown} name="md-arrow-down"/> 
-                    <Ionicons style={styles.arrowDown} name="md-arrow-down"/>  
                 </View>
                 }
                     
